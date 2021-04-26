@@ -20,6 +20,7 @@ data:
     mysqli.allow_local_infile={{ .Values.matomo.php.mysqli_allow_local_infile | default "On" }}
     default_socket_timeout={{ .Values.matomo.php.default_socket_timeout | default "20" }}
 {{ else }}
+# Make sure values exist in both data sections
 data:
   zz-global.ini: |
     expose_php=Off
